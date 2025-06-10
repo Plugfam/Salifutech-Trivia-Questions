@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                                                               
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PLUGTECH TRIVIA QUESTIONS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Plugtech Quiz</h1>
+    <div class="auth-forms">
+      <form id="loginForm">
+        <form id="loginForm">
+        </head>
+                                    
+<body>
+            <div class="login-container">
+              <h2>🔐 Login</h2>
+                 <form id="loginForm">
+               <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit" class="btn login">Login</button>
+          
+                 </form>           
+
+          <button onclick="window.location.href='idpass.html'" class="btn get-userpass">GET USERNAME PASS</button>
+
+    <div id="popup" class="popup"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const popup = document.getElementById('popup');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (username === 'Plugtech' && password === '1234') {
+        popup.textContent = '✅ Login successful!';
+        popup.className = 'popup success';
+        setTimeout(() => {
+          window.location.href = 'dashboard.html'; // Redirect after success
+        }, 1500);
+      } else {
+        popup.textContent = '❌ Wrong ID or Password!';
+        popup.className = 'popup error';
+      }
+    });
+  </script>
+</body>
+     
+                           
